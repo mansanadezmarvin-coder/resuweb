@@ -65,12 +65,92 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(
 .feature p{margin:0;color:var(--muted)}
 
 /* How it works */
-.how{padding:20px 28px}
-.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
-.steps li{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(15,23,42,0.04);display:flex;gap:12px;align-items:flex-start}
-.steps li strong{display:block;margin-bottom:6px}
-.step-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(90deg,var(--accent-2),var(--accent-3));display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 20px rgba(14,165,233,0.08)}
-.step-icon svg{width:26px;height:26px}
+.how {
+  padding: clamp(32px, 5vw, 64px) 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE GRID */
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 3vw, 32px);
+}
+
+/* CARD */
+.steps li {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 180px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* HOVER */
+.steps li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.12);
+}
+
+/* ICON */
+.step-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.25);
+}
+
+.step-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* TEXT FIX */
+.steps li strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.steps li p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  word-break: break-word;
+}
+
+/* MOBILE STACK */
+@media (max-width: 480px) {
+  .steps li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 
 /* Benefits */
 .students{padding:20px 28px}

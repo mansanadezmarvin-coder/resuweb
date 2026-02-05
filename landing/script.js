@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {threshold: 0.12})
   revealItems.forEach(it => { it.style.opacity = 0; it.style.transform = 'translateY(8px)'; io.observe(it) })
 
-  // Hook CTAs to open the resume builder (builder.html)
+  // Hook CTAs to open the resume builder (root index.html)
   const openBuilder = () => { window.location.href = 'builder.html' }
   document.getElementById('start-btn').addEventListener('click', openBuilder)
   document.getElementById('create-now').addEventListener('click', openBuilder)
