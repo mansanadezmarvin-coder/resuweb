@@ -86,6 +86,7 @@ body{
   body{padding:0}
   .container{gap:0}
   .builder,.actions,.preview-wrap h2{display:none}
+  .back-btn{display:none !important}
   .resume{box-shadow:none;border-radius:0;padding:18mm}
 }
 
@@ -126,5 +127,6 @@ body{
   .name-block h1{font-size:22px}
   .skill-pill{font-size:12px;padding:6px 8px}
 }
+
 
 
