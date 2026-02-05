@@ -111,3 +111,20 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(
   :root{--bg:#071122;--card:#071824;--muted:#9aa4b2;--accent-2:#7dd3fc}
   body{background:linear-gradient(180deg,var(--bg),#021018);color:#e6eef6}
 }
+
+/* Extra small screens tweaks */
+@media (max-width:480px){
+  body{font-size:15px}
+  .wrap{padding:16px}
+  .hero-copy h1{font-size:22px}
+  .lead{font-size:14px}
+  .cta-row{flex-direction:column}
+  .btn, .btn-primary, .btn-outline{display:block;width:100%;text-align:center}
+  .nav{flex-wrap:wrap;gap:8px}
+  .nav-link{padding:8px}
+  .header-inner .brand .tag{display:none}
+  .card-mock{width:260px}
+  .grid{gap:12px}
+  .steps{grid-template-columns:1fr}
+  .footer-inner{align-items:flex-start}
+}

@@ -112,4 +112,19 @@ body{
 .job-item.expanded .job-details{display:block}
 .matched-skill{background:var(--primary);color:#fff;padding:4px 8px;border-radius:6px;margin-left:6px;font-size:12px}
 
+/* Extra small screens tweaks */
+@media (max-width:480px){
+  body{padding:12px}
+  .container{gap:12px}
+  .row{flex-direction:column}
+  .actions{flex-direction:column}
+  .actions button{width:100%}
+  .profile-photo{width:72px;height:72px;margin-right:10px;flex:0 0 72px}
+  .profile-photo img{width:72px;height:72px}
+  .resume{min-height:320px;padding:16px}
+  .card{padding:10px}
+  .name-block h1{font-size:22px}
+  .skill-pill{font-size:12px;padding:6px 8px}
+}
+
 
